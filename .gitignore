@@ -15,6 +15,8 @@
 
 # next.js
 /.next/
+/.wrangler/
+/.pnpm-store/
 /out/
 
 # production
