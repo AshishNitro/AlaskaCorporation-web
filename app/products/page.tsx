@@ -5,6 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Products & Supplies",
   description: "Mechanical spare parts, electrical and instrumentation components, and water-treatment chemicals for industrial plants.",
+  alternates: { canonical: "/products/" },
 };
 
 export default function ProductsPage() {

@@ -19,6 +19,12 @@ pnpm build
 
 The generated site is in `out/`. Upload that directory to a static host. Configure the host to serve directory index files such as `/services/index.html`.
 
+## Search indexing
+
+The production URL is set in `app/site-config.ts`. The static build exports `/sitemap.xml` with all five public pages and `/robots.txt` with a sitemap reference. Each page also has a canonical URL.
+
+After `https://alaskacorporations.in` serves the site, check that both files are publicly reachable and submit `https://alaskacorporations.in/sitemap.xml` in Google Search Console. If the domain changes, update `app/site-config.ts` and rebuild.
+
 ## Content and assets
 
 - Page content lives in `app/`.

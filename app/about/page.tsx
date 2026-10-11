@@ -5,6 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description: "Learn about Alaska Corporation, a Gwalior-based provider of industrial plant services and supplies for breweries, beverage and distillery facilities.",
+  alternates: { canonical: "/about/" },
 };
 
 export default function AboutPage() {

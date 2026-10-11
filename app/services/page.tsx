@@ -5,6 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Services",
   description: "Installation, commissioning, operations, maintenance, utilities, automation and fabrication for brewery, beverage and distillery plants.",
+  alternates: { canonical: "/services/" },
 };
 
 const services = [

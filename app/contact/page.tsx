@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Contact Alaska Corporation in Gwalior for brewery, beverage and distillery plant services, equipment and supplies.",
+  alternates: { canonical: "/contact/" },
 };
 
 export default function ContactPage() {

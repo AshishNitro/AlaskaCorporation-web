@@ -1,5 +1,10 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const capabilities = [
   { title: "Installation & commissioning", text: "Process equipment, fermentation systems and packaging lines brought into operation." },
