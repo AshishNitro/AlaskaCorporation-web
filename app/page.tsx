@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: { absolute: "Alaska Corporations | Industrial Plant Services" },
   alternates: { canonical: "/" },
 };
 
@@ -21,7 +22,7 @@ export default function Home() {
         <div className="container hero-content">
           <p className="eyebrow">Brewery · Beverage · Distillery</p>
           <h1>Industrial work,<br /><span>done end to end.</span></h1>
-          <p className="hero-lead">Installation, maintenance, automation and plant supplies for production facilities that need to keep moving.</p>
+          <p className="hero-lead">Alaska Corporations provides installation, maintenance, automation and plant supplies for production facilities that need to keep moving.</p>
           <div className="button-row">
             <Link className="button button-accent" href="/services/">Explore services</Link>
             <Link className="button button-outline" href="/contact/">Start an enquiry</Link>
