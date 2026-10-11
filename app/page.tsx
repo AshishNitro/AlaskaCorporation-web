@@ -1,69 +1,88 @@
-import Image from "next/image";
+﻿import Image from "next/image";
+import Link from "next/link";
+
+const capabilities = [
+  { title: "Installation & commissioning", text: "Process equipment, fermentation systems and packaging lines brought into operation." },
+  { title: "Operations & maintenance", text: "Mechanical, electrical and instrumentation support across plant operations." },
+  { title: "Controls & automation", text: "PLC and SCADA upgrades, with automation for existing tanks and systems." },
+  { title: "Parts & plant supplies", text: "Mechanical spares, electrical components and water-treatment chemicals." },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      <section className="hero">
+        <div className="hero-image" aria-hidden="true" />
+        <div className="container hero-content">
+          <p className="eyebrow">Brewery · Beverage · Distillery</p>
+          <h1>Industrial work,<br /><span>done end to end.</span></h1>
+          <p className="hero-lead">Installation, maintenance, automation and plant supplies for production facilities that need to keep moving.</p>
+          <div className="button-row">
+            <Link className="button button-accent" href="/services/">Explore services</Link>
+            <Link className="button button-outline" href="/contact/">Start an enquiry</Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-heading">
+            <h2>One plant. Many moving parts.</h2>
+            <p>Alaska Corporation supports the equipment, utilities and systems behind brewery, beverage and distillery operations.</p>
+          </div>
+          <div className="capability-grid">
+            {capabilities.map((item) => (
+              <article className="capability" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="feature-split">
+        <div className="feature-media">
+          <Image src="/images/process-pump.jpg" alt="Illustrative stainless steel process piping and pump in a production plant" width={1400} height={1050} sizes="(max-width: 800px) 100vw, 50vw" />
+        </div>
+        <div className="feature-content">
+          <div className="feature-inner">
+            <h2>From the brewhouse to the utility room.</h2>
+            <p>Our scope spans process and packaging equipment, electrical and instrumentation systems, and the utilities that support daily production.</p>
+            <div className="feature-list">
+              <span>Process & fermentation</span>
+              <span>Packaging & filling</span>
+              <span>Utilities & controls</span>
+            </div>
+            <Link className="text-link" href="/services/">See the full service scope <span aria-hidden="true">↗</span></Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section sector-section">
+        <div className="container sector-layout">
+          <div>
+            <h2>Built around production.</h2>
+            <p>Practical support for plant teams, from commissioning new equipment to maintaining existing lines and sourcing critical parts.</p>
+            <Link className="text-link" href="/products/">Explore products & supplies <span aria-hidden="true">↗</span></Link>
+          </div>
+          <div className="sector-list" aria-label="Industries served">
+            <div><span>01</span><strong>Breweries</strong></div>
+            <div><span>02</span><strong>Beverage plants</strong></div>
+            <div><span>03</span><strong>Distilleries</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section contact-band">
+        <div className="container contact-band-inner">
+          <div>
+            <h2>Tell us what your plant needs.</h2>
+            <p>Share your equipment, maintenance or supply requirement with our Gwalior team.</p>
+          </div>
+          <Link className="button button-accent" href="/contact/">Contact Alaska Corporation</Link>
+        </div>
+      </section>
+    </main>
   );
 }
